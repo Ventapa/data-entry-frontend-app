@@ -8,7 +8,6 @@ function DataEntry() {
 
   const handleInsert = async () => {
     try {
-      console.log(process.env.REACT_APP_API_URL);
       const response = await axios.get(
         `https://data-entry-b4csbwfraed9g4bp.canadacentral-01.azurewebsites.net/insert?name=${name}&address=${address}`
       );
@@ -22,7 +21,6 @@ function DataEntry() {
 
   const handleSelect = async () => {
     try {
-      console.log(process.env.REACT_APP_API_URL);
       const response = await axios.get(
         `https://data-entry-b4csbwfraed9g4bp.canadacentral-01.azurewebsites.net/select`
       );
