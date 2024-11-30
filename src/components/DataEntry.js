@@ -10,7 +10,7 @@ function DataEntry() {
     try {
       console.log(process.env.REACT_APP_API_URL);
       const response = await axios.get(
-        `${process.env.REACT_APP_API_URL}/insert?name=${name}&address=${address}`
+        `https://data-entry-b4csbwfraed9g4bp.canadacentral-01.azurewebsites.net/insert?name=${name}&address=${address}`
       );
       console.log(response.data);
       alert("Data inserted successfully!");
@@ -24,7 +24,7 @@ function DataEntry() {
     try {
       console.log(process.env.REACT_APP_API_URL);
       const response = await axios.get(
-        `${process.env.REACT_APP_API_URL}/select`
+        `https://data-entry-b4csbwfraed9g4bp.canadacentral-01.azurewebsites.net/select`
       );
       setData(response.data);
       console.log(response.data);
